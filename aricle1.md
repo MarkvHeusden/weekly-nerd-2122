@@ -1,17 +1,3 @@
-# Weekly nerd
-
--   [Artikel 1: CSS Logical Properties and Values](#css-logical-properties-and-values)
--   [Artikel 1: CSS Logical Properties and Values](#css-logical-properties-and-values)
--   [Artikel 1: CSS Logical Properties and Values](#css-logical-properties-and-values)
-
-<!-- - Accessibility
-- Typescript
-- Svelte(kit)
-- Custom properties
-- margin inline-end
-- web 3.0
-- serverside vs clientside -->
-
 ## CSS Logical Properties and Values
 
 Wanneer je een meertalige website wil maken kun je te maken krijgen met problemen in de layout wanneer een taal niet van links naar rechts gaat, maar andersom. Of zelfs als de taal van onder naar boven leest. Wanneer dit het geval is, is het erg handig om te kijken naar Logical Properties & Values in CSS. De browser support is inmiddels vrij goed, en ook als je niet met een meertalige website werkt kan het super handig zijn.
