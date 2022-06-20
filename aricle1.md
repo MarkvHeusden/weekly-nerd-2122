@@ -73,6 +73,7 @@ Dit waren handige dingen om fijnere code te schrijven, maar je kunt het ook gebr
 ```html
 <!-- Left To Right, bijv. Nederlands -->
 <html dir="ltr">
+    
 <!-- Right To Left, bijv. Arabisch -->
 <html dir="rtl">
 ```
@@ -103,12 +104,12 @@ Dit is misschien nog wat vaag, maar er zijn nog veel meer properties die je kunt
 
 ```css
 /* Logical properties           Normale properties         */
-border-block-start: 10px; /*  border-top: 10px;      */
-padding-inline-end: 10px; /*  padding-right: 10px;   */
-margin-block-start: 10px; /*  margin-top: 10px;      */
-text-align: start; /*  text-align: left;      */
-inline-size: 100px; /*  width: 100px;          */
-max-block-size: 100px; /*  max-height: 100px;     */
+border-block-start: 10px;     	/*  border-top: 10px;      */
+padding-inline-end: 10px;     	/*  padding-right: 10px;   */
+margin-block-start: 10px;      	/*  margin-top: 10px;      */
+text-align: start;            	/*  text-align: left;      */
+inline-size: 100px;             /*  width: 100px;          */
+max-block-size: 100px;         	/*  max-height: 100px;     */
 ```
 
 ## Bronnen
