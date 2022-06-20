@@ -1,4 +1,4 @@
-# Weekly nerd
+# Weekly nerd 🧠
 
 -   [Artikel 1: CSS Logical Properties and Values](/article1.md)
 -   [Artikel 2:]()
