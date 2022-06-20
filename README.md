@@ -1,117 +1,132 @@
-# Weekly Nerd @cmda-minor-web 2021 - 2022
+# Weekly nerd
 
-Tijdens de minor worden een aantal sessies georganiseerd om kennis te maken met het vakgebied. 
-Workshops, praatjes en lezingen van bedrijven en designers over het vakgebied. Nerd alert.
+-   [Artikel 1: CSS Logical Properties and Values](#css-logical-properties-and-values)
+-   [Artikel 1: CSS Logical Properties and Values](#css-logical-properties-and-values)
+-   [Artikel 1: CSS Logical Properties and Values](#css-logical-properties-and-values)
 
-## Leerdoelen
-- Kennismaken met het beroepenveld
-- Oriënteren op het vakgebied
-- Vakgerelateerde artikelen leren schrijven
+<!-- - Accessibility
+- Typescript
+- Svelte(kit)
+- Custom properties
+- margin inline-end
+- web 3.0
+- serverside vs clientside -->
 
-## Programma & Werkwijze
-Drie keer wordt er een presentatie gegeven door bedrijven uit het vakgebied. 
-Bedrijven presenteren een Case Study en er is ruimte om vragen te stellen. 
-Zo krijg je een goed beeld van het vakgebied en krijg je contacten in het werkveld. 
-Dat kan handig zijn voor als je een afstudeerstage zoekt, of een afstudeeropdracht. 
-Maak van iedere presentatie sketch-notes / aantekeningen.
-Fork de Weekly Nerd repo en verzamel je aantekeningen in de wiki of maak zelf een blog. 
-Er wordt van je verwacht dat je alle Weekly Nerds bijwoont. 
-Als je een Weekly Nerd mist dan krijg je een vervangende opdracht.
-<!-- Tip: Schrijf ook altijd een link-lijstje met (interessante) onderwerpen die aan bod zijn gekomen. -->
+## CSS Logical Properties and Values
 
+Wanneer je een meertalige website wil maken kun je te maken krijgen met problemen in de layout wanneer een taal niet van links naar rechts gaat, maar andersom. Of zelfs als de taal van onder naar boven leest. Wanneer dit het geval is, is het erg handig om te kijken naar Logical Properties & Values in CSS. De browser support is inmiddels vrij goed, en ook als je niet met een meertalige website werkt kan het super handig zijn.
 
-Drie keer schrijf je een uitgebreid artikel over een relevant onderwerp. 
-Bijvoorbeeld een eigen onderzoek naar een techniek of een (technische) analyse van een website die in een Weekly Nerd is behandeld. 
-[Lees hier meer over het schrijven van artikelen](#weekly-nerd-artikelen) en lees een paar voorbeelden van vorige jaren. 
+![Schermafbeelding 2022-06-20 om 21.42.45.png](/docs/1-1.png)
 
+### Inline & block
 
-### Programma
+We hebben allemaal wel is iets gecentreerd op 1 van de volgende 2 manieren:
 
-| Datum  | Spreker |
-|---|---|
-| 9 februari  | Cyd Stumpel - Creative Developer |
-| 16 februari  | Alvaro Montoro |
-| 2 maart  | Fenna de Wilde |
-| 9 maart  | x |
-| 16 maart  | Rik Schennink |
-| 23 maart  | Krijn Hoetmer |
-| 30 maart  | Vitaly Friedman |
-| 6 april  | x |
-| 13 april  | Chanel |
-| 20 april  | Léonie Watson |
-| 27 april  | Rian Rietveld |
-| 11 mei  | x |
-| 18 mei  | x |
-| 25 mei  | Weekly Mingle |
-| 1 juni  | Weekly Mingle |
-| 8 juni  | Weekly Mingle |
-| 15 juni  | Weekly Mingle |
+```css
+/* Voorbeeld 1 */
+div {
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* Voorbeeld 2 */
+div {
+  margin: 0 auto:
+}
+```
 
+Het eerste voorbeeld vereist 2 regels CSS, waardoor vaak het tweede voorbeeld wordt gebruikt (developers zijn nou eenmaal lui). Het probleem hierbij is, dat je bij het tweede voorbeeld gelijk de margin aan de boven en onderkant weghaalt, wat niet altijd gewenst is. Gelukkig kan je tegenwoordig met gebruik van logical properties. Dit houdt in dat je met 1 regel code de `div` kan centreren, terwijl je tegelijkertijd de margin top en bottom behoudt die je mogelijk eerder hebt ingesteld.
 
-<!-- ### Weekly Nerd #1
+```css
+/* Met logical properties */
+div {
+	margin-inline: auto;
+}
+```
 
-| Vrijdag 5 Maart  |  Bedrijven |
-|---|---|
-| 14:00  | Kickoff |
-| 14:05  | [Dept](https://www.deptagency.com/nl-nl/) met [Raymond Korrel](https://www.linkedin.com/in/raymond-korrel/) Frontend Developer & [Ilayda Küçükosmanoğlu](https://www.linkedin.com/in/ilaydadept/) Interaction Designer |
-| 15:00  | [Label A](https://labela.nl) met [Gavin Ligthart](https://www.linkedin.com/in/gavinligthart/) Frontend Developer|
+Met `margin-inline` kun je dus in 1 keer de `margin-left` en `margin-right` definiëren. Hetzelfde is mogelijk voor de`margin-top` en `margin-bottom` , hiervoor kun je namelijk `margin-block` gebruiken.
 
-#### Vraag #1
+## Meer dan margin
 
-In de post [Wat is een goede frontend developer](https://css-tricks.com/what-makes-a-good-front-end-developer/) op CSS tricks staat een lijst interessante mensen die beschrijven wat een frontende developer is. Welke skills denk jij dat een goede frontender moet hebben en wat voor frontender ben jij eigenlijk? Lees ook de [The great divide](https://css-tricks.com/the-great-divide/) van Chris Coyer om deze vraag te beantwoorden. 
+Hier eindigt het echt niet. Je kunt dit niet alleen voor de margin gebruiken, maar voor nog veel meer properties. Hieronder volgt een voorbeeld van andere selecteren die kunt gebruiken met de uitkomst ervan.
 
+### HTML
 
-### Weekly Nerd #2
+```html
+<p class="voorbeeld-1">border-block</p>
+<p class="voorbeeld-2">border-inline</p>
+```
 
-| donderdag 1 april  |  Bedrijven |
-|---|---|
-| 14:00 | Intro |
-| 14:01 | [Build in Amsterdam](https://www.buildinamsterdam.com/cases) met [Fenna de Wilde](https://www.linkedin.com/in/fenna-de-wilde/) Frontend Developer|
-| 15:00 | [Triple](https://www.wearetriple.com) met [Chanel Mepschen](https://www.linkedin.com/in/chanel-mepschen-1223a9b2/) & [Shyanta Vleugel](https://www.linkedin.com/in/shyantav/) Frontend Developers |
+### CSS
 
-#### Vraag #2
+```css
+/* Gebruik ook bij bijvoorbeeld padding */
+p {
+	padding-inline: 0.5rem;
+	padding-block: 4rem;
+}
 
-Je hebt geleerd hoe je toegankelijke websites kan maken. Een belangrijk uitgangspunt voor een digital designer is er voor zorgen dat een website door iedereen te gebruiken is. Toch zijn veel ontwikkelbedrijven zelf niet 'inclusive'. Ook de tech-industrie bestaat voor een groot deel uit dezelfde type personen en testen vervolgens hun websites bij weer dezelfde types, met stereotypering, vooroordelen en _biased_ uitkomsten tot gevolg. Herken je dit als probleem? Moet dit veranderen? In wat voor team zie jij jezelf graag werken? 
-Lees het artikel [On racism and sexism in branding, user interface, and tech](https://uxdesign.cc/on-racism-and-sexism-in-branding-user-interface-and-tech-337f5ceb7ed5) en het project [Working towards a more inclusive design scene in The Netherlands](https://inclusief.design) en gebruik dit voor het beantwoorden van de vraag.
+/* Of bij borders */
+.voorbeeld-1 {
+	border-block: 0.5rem solid red;
+}
 
-<img width="1145" alt="Adapting to Reality" src="https://user-images.githubusercontent.com/1391509/113145133-58267b80-922e-11eb-82e4-f7c8867b90ce.png">
+.voorbeeld-2 {
+	border-inline: 0.5rem solid red;
+}
+```
 
+### Resultaat
 
-### Weekly Nerd #3
+![Schermafbeelding 2022-06-20 om 21.58.05.png](/docs/1-2.png)
 
-| vrijdag 30 april  |  Bedrijven |
-|---|---|
-| 15:00 | Intro |
-| 15:01 | [Mirabeau](https://www.mirabeau.nl) met [Dave Bitter](https://www.davebitter.com/) Frontend Developer & [Alexander Munz]() Visual Designer|
+## W\***\*riting mode & direction\*\***
 
+Dit waren handige dingen om fijnere code te schrijven, maar je kunt het ook gebruiken bij meertalige sites met een andere leesrichting. Onze taal leest van links naar rechts, maar bijvoorbeeld Arabisch leest andersom. Dit kun je in je HTML wijzigen door de direction aan te passen.
 
-#### Vraag #3
+```html
+<!-- Left To Right, bijv. Nederlands -->
+<html dir="ltr">
+	<!-- Right To Left, bijv. Arabisch -->
+	<html dir="rtl"></html>
+</html>
+```
 
-Je bent nu 3 maanden 24/7 code aan het klopppppen. Hopelijk heb je super veel geleerd, ben je regelmatig uitgedaagd, weet je (nog beter) waar je grenzen liggen en hoe je je verder kan en wil onwikkelen als "frontender". Of juist niet ... 
+Omdat CSS is ontwikkelt met de Engelse taal, geeft het veranderen van de leesrichting veel problemen met de layout. Voorheen was dit te fixen door middel van de volgende code:
 
-In de verschillende vakken die je hebt gevolgd zijn technieken en werkwijzen aan bod gekomen die een "echte" frontender ook doet: prototypen, experimenteren, ingewikkelde code, simpele code, onderzoeken, testen, lezen, documenteren, en heel veel HTML, CSS en JS, op de client en op de server. Welke onderwerpen hebben de meeste indruk op je gemaakt? Een gastspreker of een test? Een inzicht tijdens een Discord-sessie met een van de student-assistenten? Schrijf per vak wat je hebt geleerd en wat je meeneemt als frontender. -->
+```css
+.absolute-element {
+	position: absolute;
+}
 
+[dir="rtl"] .absolute-element {
+	right: 50px;
+}
 
-### Weekly Nerd artikelen
+[dir="ltr"] .absolute-element {
+	left: 50px;
+}
+```
 
-Drie keer schrijf je een uitgebreid artikel over een relevant web design en development onderwerp. 
-Bijvoorbeeld een eigen onderzoek naar een techniek of een (technische) analyse van een website die in een Weekly Nerd is behandeld. 
-Zorg voor juiste verwijzingen, bronvermelding en goede leesbare teksten. 
-Engels wordt aangeraden.
+Het wijzigen van elk element op deze manier is geen leuk werk en vereist ook veel code. Gelukkig kun je hiervoor ook CSS Logical Properties gebruiken. Je kunt dan het beste dingen als `left`/`right` vervangen door `inline`, `top`/`bottom` door `block`, of `top` door `start` en `bottom` door `end`.
 
-Je blog met de verslagen en artikelen moet voor de laatste week van de Meesterproef ingeleverd zijn.  
-Deadline zondag 19 juni 2022 voor 23:59.
+Als je talen wil ondersteunen die van onder naar boven lezen kun je zelfs dingen als `width` en `height` vervangen. Bijvoorbeeld `inline-size` voor  `width` en `block-size` voor `height`.
 
-Tip: Schrijf elke lesblok een artikel en lever dit in, dan hoef je niet alle artikelen aan het eind van de minor te schrijven en krijg je tussentijds feedback op je niveau en schrijfstijl. 
+## Voorbeeld
 
+Dit is misschien nog wat vaag, maar er zijn nog veel meer properties die je kunt vervangen voor deze logical properties. Hier vind je een lijstje met nog een paar voorbeelden:
 
-### Voorbeelden van artikelen van voorgaande jaren
+```css
+/* Logical properties           Normale properties         */
+border-block-start: 10px; /*  border-top: 10px;      */
+padding-inline-end: 10px; /*  padding-right: 10px;   */
+margin-block-start: 10px; /*  margin-top: 10px;      */
+text-align: start; /*  text-align: left;      */
+inline-size: 100px; /*  width: 100px;          */
+max-block-size: 100px; /*  max-height: 100px;     */
+```
 
-* https://medium.com/@vincentkempers_/functional-light-programming-helped-me-a-lot-99856a9ac0ff
-* https://codepen.io/servinnissen/post/plan-then-code
-* https://github.com/Jamerrone/weekly-nerd-blog/blob/master/articles/article-3.md
-* https://github.com/muise001/Weekly_Nerd#bruce-lawson---w3c-over-webstandards
-* https://medium.com/@vincentkempers_/my-experience-at-nlhtml5-x-cssday-df855997a191
+## Bronnen
 
-
+-   [https://www.voorhoede.nl/nl/blog/how-to-multilingual-website-rtl-html-css/](https://www.voorhoede.nl/nl/blog/how-to-multilingual-website-rtl-html-css/)
+-   [https://css-tricks.com/css-logical-properties-and-values/](https://css-tricks.com/css-logical-properties-and-values/)
