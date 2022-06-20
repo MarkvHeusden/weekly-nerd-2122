@@ -25,13 +25,13 @@ We hebben allemaal wel is iets gecentreerd op 1 van de volgende 2 manieren:
 ```css
 /* Voorbeeld 1 */
 div {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Voorbeeld 2 */
 div {
-  margin: 0 auto:
+    margin: 0 auto:
 }
 ```
 
