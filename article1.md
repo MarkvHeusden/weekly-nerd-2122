@@ -1,10 +1,10 @@
-## CSS Logical Properties and Values
+# CSS Logical Properties and Values
 
 Wanneer je een meertalige website wil maken kun je te maken krijgen met problemen in de layout wanneer een taal niet van links naar rechts gaat, maar andersom. Of zelfs als de taal van onder naar boven leest. Wanneer dit het geval is, is het erg handig om te kijken naar Logical Properties & Values in CSS. De browser support is inmiddels vrij goed, en ook als je niet met een meertalige website werkt kan het super handig zijn.
 
 ![Schermafbeelding 2022-06-20 om 21.42.45.png](/docs/1-1.png)
 
-### Inline & block
+## Inline & block
 
 We hebben allemaal wel is iets gecentreerd op 1 van de volgende 2 manieren:
 
